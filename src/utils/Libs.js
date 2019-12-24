@@ -1,4 +1,5 @@
 /** @format */
+/*eslint no-extend-native: ["error", { "exceptions": ["String"] }]*/
 
 String.prototype.cleanString = function() {
 	let asccii = 0;
