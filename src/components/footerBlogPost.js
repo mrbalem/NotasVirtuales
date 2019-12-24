@@ -18,7 +18,7 @@ const FooterBLogPost = () => {
 				isrequest: true
 			});
 		}
-	}, []);
+	}, [setconfig, datas]);
 
 	return (
 		<footer>

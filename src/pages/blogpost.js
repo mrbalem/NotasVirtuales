@@ -28,7 +28,7 @@ const BLogPost = props => {
 				isrequest: true
 			});
 		}
-	}, []);
+	}, [props.location.state, setConfig ]);
 
 	if (props.location.state === undefined) {
 		if (datas === null) {

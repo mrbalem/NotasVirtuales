@@ -19,16 +19,19 @@ const ListBlog = props => {
 				<div class='col-sm-6 col-md-4 item' key={`${index}`}>
 					<Link
 						to={{
-							pathname: `/blogpost/${data.Titulo.cleanString()}#`,
+							pathname: `/blogpost/${data.Titulo.cleanString()}`,
 							state: data
 						}}>
-						<img class='img-fluid' src={data.portada} />
+						<img class='img-fluid' src={data.portada} alt={data.Autor} />
 					</Link>
 					<h3 class='name'>{data.Autor}</h3>
 					<p class='description'>{data.Titulo}</p>
-					<a class='action' href='#'>
+					<Link  to={{
+							pathname: `/blogpost/${data.Titulo.cleanString()}`,
+							state: data
+						}} class='action'>
 						<i class='fa fa-arrow-circle-right'></i>
-					</a>
+					</Link>
 				</div>
 			))}
 		</div>

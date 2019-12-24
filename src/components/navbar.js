@@ -1,12 +1,12 @@
 /** @format */
 
-import React, { useContext } from 'react';
+import React from 'react';
 //import logo from '../logo.svg';
-import { StoreContext } from '../context/StoreContext';
+//import { StoreContext } from '../context/StoreContext';
 import { Link } from 'react-router-dom';
 
 const Navbar = () => {
-	const { state } = useContext(StoreContext);
+	//const { state } = useContext(StoreContext);
 	return (
 		//navbar navbar-expand-lg navbar-light bg-light
 

@@ -7,17 +7,6 @@ import ListBlog from '../components/listblog';
 
 const Blogs = () => {
 	const [datas, setconfig] = useServices();
-
-	useEffect(() => {
-		if (datas === null) {
-			setconfig({
-				type: 'GET',
-				urls: 'https://us-central1-fir-mrvalem.cloudfunctions.net/getBlogLists',
-				isrequest: true
-			});
-		}
-	}, []);
-
 	const removeClass = () => {
 		let elemento = document.getElementsByClassName('bg-dark')[0];
 		if (elemento !== undefined) {
@@ -27,8 +16,20 @@ const Blogs = () => {
 	};
 
 	useEffect(() => {
+		if (datas === null) {
+			setconfig({
+				type: 'GET',
+				urls: 'https://us-central1-fir-mrvalem.cloudfunctions.net/getBlogLists',
+				isrequest: true
+			});
+		}
+
 		removeClass();
-	}, []);
+	}, [datas, setconfig]);
+
+	
+
+	
 
 	return (
 		<div>
